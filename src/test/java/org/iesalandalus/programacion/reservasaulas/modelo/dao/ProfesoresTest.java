@@ -1,8 +1,7 @@
 package org.iesalandalus.programacion.reservasaulas.modelo.dao;
-/*
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.fail;
 
@@ -12,15 +11,15 @@ import javax.naming.OperationNotSupportedException;
 
 import org.iesalandalus.programacion.reservasaulas.modelo.dominio.Profesor;
 import org.junit.Test;
-*/
+
 public class ProfesoresTest {
-/*	
+	
 	private static final String NOMBRE_PROFESOR1 = "José Ramón";
 	private static final String NOMBRE_PROFESOR2 = "Andrés";
 	private static final String NOMBRE_PROFESOR3 = "Begoña";
-	private static final String CORREO_PROFESOR1 = "a@b.cc";
-	private static final String CORREO_PROFESOR2 = "b@c.dd";
-	private static final String CORREO_PROFESOR3 = "c@d.ee";
+	private static final String CORREO_PROFESOR1 = "aaa@bbb.ccc";
+	private static final String CORREO_PROFESOR2 = "bbb@ccc.ddd";
+	private static final String CORREO_PROFESOR3 = "ccc@ddd.ee";
 	private static final String ERROR_EXCEPCION = "Debería haber saltado la excepción.";
 	private static final String ERROR_NO_EXCEPCION = "No debería haber saltado la excepción.";
 	
@@ -219,16 +218,16 @@ public class ProfesoresTest {
 	public void borrarInsertarTest() {
 		Profesores profesores = insertarTres();
 		try {
-			profesores.borrar(profesor1);
-			assertEquals(2, profesores.getNumProfesores());
-			assertNull(profesores.buscar(profesor1));
-			profesores.insertar(profesor1);
-			assertEquals(3, profesores.getNumProfesores());
-			assertEquals(profesor1, profesores.buscar(profesor1));
-			List<Profesor> profesores1 = profesores.getProfesores();
-			assertEquals(profesor2, profesores1.get(0));
-			assertEquals(profesor3, profesores1.get(1));
-			assertEquals(profesor1, profesores1.get(2));
+			profesores.borrar(profesor1);			
+			assertEquals(2, profesores.getNumProfesores());			
+			assertNull(profesores.buscar(profesor1));			
+			profesores.insertar(profesor1);			
+			assertEquals(3, profesores.getNumProfesores());			
+			assertEquals(profesor1, profesores.buscar(profesor1));			
+			List<Profesor> profesores1 = profesores.getProfesores();			
+			assertEquals(profesor2, profesores1.get(0));			
+			assertEquals(profesor3, profesores1.get(1));			
+			assertEquals(profesor1, profesores1.get(2));			
 		} catch (OperationNotSupportedException e) {
 			fail(ERROR_NO_EXCEPCION);
 		}
@@ -248,5 +247,5 @@ public class ProfesoresTest {
 		assertEquals(profesor2.toString(), representacion.get(1));
 		assertEquals(profesor3.toString(), representacion.get(2));
 	}
-*/
+
 }
