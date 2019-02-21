@@ -2,6 +2,9 @@ package org.iesalandalus.programacion.reservasaulas.modelo.dao;
 
 import javax.naming.OperationNotSupportedException;
 import org.iesalandalus.programacion.reservasaulas.modelo.dominio.Aula;
+
+import java.io.IOError;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +44,7 @@ public class Aulas {
 		return this.coleccionAulas.size();
 	}
 
-	public void insertar(Aula aula) throws OperationNotSupportedException {
+	public void insertar(Aula aula) throws OperationNotSupportedException, IllegalArgumentException {
 		if (aula == null)
 			throw new IllegalArgumentException("No se puede insertar un aula nula.");
 		else {
@@ -62,7 +65,7 @@ public class Aulas {
 			return null;
 	}
 
-	public void borrar(Aula aula) throws OperationNotSupportedException {
+	public void borrar(Aula aula) throws OperationNotSupportedException, IllegalArgumentException {
 		if (aula == null) {
 			throw new IllegalArgumentException("No se puede borrar un aula nula.");
 		} else {
